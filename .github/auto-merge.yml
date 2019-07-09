@@ -13,6 +13,8 @@ minApprovals:
 maxRequestedChanges:
   COLLABORATOR: 0
 
+reportStatus: true
+
 # Whether an out-of-date pull request is automatically updated.
 # It does so by merging its base on top of the head of the pull request.
 # This is the equivalent of clicking the 'Update branch' button.
