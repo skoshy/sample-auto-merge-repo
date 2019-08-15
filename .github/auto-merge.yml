@@ -6,7 +6,7 @@
 
 # root level minApprovals is required, so we default it to nothing
 minApprovals:
-  NONE: 0
+  COLLABORATOR: 0
 
 reportStatus: true
 
