@@ -5,6 +5,9 @@ mergeable:
       # list of validators. Specify one or more.
       - do: approvals
         min: 1
+    pass:
+      - do: checks
+        status: 'success'
   - when: pull_request.*, pull_request_review.*
     validate:
       - do: approvals
@@ -12,8 +15,14 @@ mergeable:
       - do: label
         must_include:
           regex: 'MERGE'
+    pass:
+      - do: checks
+        status: 'success'
   - when: pull_request.*, pull_request_review.*
     validate:
       - do: label
         must_include:
           regex: 'EMERGENCY-RELEASE'
+    pass:
+      - do: checks
+        status: 'success'
